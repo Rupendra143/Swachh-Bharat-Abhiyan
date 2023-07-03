@@ -1,0 +1,87 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/General_Master_Page.cshtml";
+}
+<script>
+    // checkbox  code
+    $(document).ready(function () {
+        $("#chk").change(function () {
+            var bt = $("#btn").prop("disabled")
+            if (bt == true) {
+                $("#btn").prop("disabled", false)
+                $("#btn").css("color", "whitesmoke")
+                $("#btn").css("background", "green")
+            }
+            else {
+                $("#btn").prop("disabled", true)
+                $("#btn").css("color", "black")
+                $("#btn").css("background", "gray")
+            }
+        })
+
+    })
+
+    // password hide show
+    function show() {
+        var p = document.getElementById("bpass").value;
+        if (p == 'show') {
+            document.getElementById("bpass").value = "hide";
+            document.getElementById("tpass").type = "text";
+            document.getElementById("tcpass").type = "text";
+        }
+        else {
+            document.getElementById("bpass").value = "show";
+            document.getElementById("tpass").type = "password";
+            document.getElementById("tcpass").type = "password";
+        }
+
+    }
+
+    </script>
+
+<br />
+       <form action="/Default1/Login" method="post">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12" style="min-height:400px;">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-9" style="min-height: 400px;  box-shadow: rgba(15, 133, 117, 0.82) 4px 5px 6px 5px, rgba(255, 255,255,0.5) -3px -3px 6px 2px;">
+                    <div class="row">
+                        <div class="col-sm-12 text-center" style="min-height:40px;background-color:lightblue;font-size:25px;font-family:Algerian;font-weight:bold;">Login Form</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 " style="min-height:360px;background-color:#e0d8d8;padding:0px;">
+                            <div class="col-sm-6" style="padding:0px;">
+                                <img src="~/Content/Project_Images/bk.png" style="height:360px;width:100%;" />
+                            </div>
+                       <div class="col-sm-6">
+                                 <br />
+                  <span   style="font-size: 23px; font-family: Bodoni MT; font-weight: bolder; color: darkmagenta; margin-left: 40px;">User Id</span>&nbsp;
+                            <br />       
+                   <input  name="Uid" type="text" placeholder="Enter email or phone no.." class="form-control " style="width:300px;margin-left:40px;" required />
+                            <br />
+                            <span style="font-size: 23px; font-family: Bodoni MT; font-weight: bolder; color: darkmagenta; margin-left: 40px;">Password</span>
+                            <input  class="fa fa-eye" onclick="show()" type="button" value="show" id="bpass" style="font-size:10px;margin-left:30px;" /><br />
+
+                            <input name="psw"  id="tpass" type="password" placeholder="Enter your password" class="form-control"  style="width:300px;margin-left:40px;opacity:0.9;" required />
+                            <br />
+                            <input id="chk" type="checkbox" style="font-size: 35px;margin-left:30px;" /><span style="color: darkblue; font-weight: bolder; font-size: 20px; font-family: Bodoni MT;"> I Agree for Terms & Conditions</span><br><br>
+
+                            <button type="submit" id="btn" class="btn btn-success" disabled style="margin-left:120px;font-family:'Arial Rounded MT';font-weight:bold;font-size:20px;">Submit</button>
+                            <p style="font-size:15px;font-family:'Arial Rounded MT';text-align:center;">@ViewBag.m</p>
+                            <br />   <span style="font-size: 20px; color: darkblue; font-weight: bolder; font-family: Bodoni MT; margin-left: 60px;">
+                                Creat An Account..
+                                <a href="~/Default1/Registration_Form">Click Here</a>
+                            </span>
+                        </div></div>
+                    </div>
+
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+        </div>
+    </div>
+</form>
+<br />

@@ -1,0 +1,135 @@
+﻿@{
+    ViewBag.Title = "EditProfile";
+    Layout = "~/Views/Shared/MasterAdmin.cshtml";
+}
+
+<script>
+    // checkbox  code
+    $(document).ready(function () {
+        $("#chk").change(function () {
+            var bt = $("#btn").prop("disabled")
+            if (bt == true) {
+                $("#btn").prop("disabled", false)
+                $("#btn").css("color", "black")
+                $("#btn").css("background", "green")
+            }
+            else {
+                $("#btn").prop("disabled", true)
+                $("#btn").css("color", "black")
+                $("#btn").css("background", "gray")
+            }
+        })
+
+    })
+
+    // password match code
+    function show() {
+        var p = document.getElementById("bpass").value;
+        if (p == 'show') {
+            document.getElementById("bpass").value = "hide";
+            document.getElementById("tpass").type = "text";
+            document.getElementById("tcpass").type = "text";
+        }
+        else {
+            document.getElementById("bpass").value = "show";
+            document.getElementById("tpass").type = "password";
+            document.getElementById("tcpass").type = "password";
+        }
+
+    }
+    function cnfrm() {
+        var ps = document.getElementById("tpass").value;
+        var cps = document.getElementById("tcpass").value;
+        if (ps != cps) {
+            document.getElementById("sp").innerText = "Password not Match"
+        }
+        else {
+            document.getElementById("sp").innerText = "Password  Match"
+        }
+
+    }
+</script>
+
+<form action="/Admin/Editprofile" method="post">
+    <br />
+    <!------Edit profile form Code----------->
+    
+        
+            <div  style="height: 350px; width: 800px; margin-left: 100px; background-color: lightblue; "> 
+              <div class="col-sm-12 text-center" style="min-height:40px;background-color:gray;font-family:Algerian;font-weight:bolder;font-size:25px;padding-top:5px;">Edit Profile</div>
+                <br />             
+              <div class="col-sm-12" style="min-height: 200px;">
+                        
+                  <div class="col-sm-6">
+                            <span style="font-weight: bolder; font-family: Bodoni MT; font-size: 20px; ">Name</span><br />
+                                       <input name="name" type="text" placeholder="Enter Your Name" required value="@ViewBag.name" style="font-size:15px;width:250px;" class="form-control" />
+                            <span style="font-weight: bolder; font-family: Bodoni MT; font-size: 20px;">Mobile No..</span><br />
+                                       <input name="nmbr" type="number" placeholder="Enter Your Number" required value="@ViewBag.mobile" style=" font-size:15px;width:250px;" class="form-control" />
+                            <span style="font-weight: bolder; font-family: Bodoni MT; font-size: 20px;">State</span><br />
+                            <select name="city" class="form-control" style="width:250px;">
+                                <option>@ViewBag.state</option>
+                                <option>Andhra Pradesh</option>
+                                <option>Arunachal Pradesh</option>
+                                <option>Assam</option>
+                                <option>Bihar</option>
+                                <option>Chhattisgarh</option>
+                                <option>Goa</option>
+                                <option>Gujrat</option>
+                                <option>Haryana</option>
+                                <option>Himachal Pradesh</option>
+                                <option>Jharkhand</option>
+                                <option>Karnataka</option>
+                                <option>Kerala</option>
+                                <option>Madhya Pradesh</option>
+                                <option>Maharashtra</option>
+                                <option>Manipur</option>
+                                <option>Meghalaya</option>
+                                <option>Mizoram</option>
+                                <option>Nagaland</option>
+                                <option>Odisha</option>
+                                <option>Punjab</option>
+                                <option>Rajasthan</option>
+                                <option>Sikkim</option>
+                                <option>Tamilnadu</option>
+                                <option>Telangana</option>
+                                <option>Tripura</option>
+                                <option>Uttar Pradesh</option>
+                                <option>Uttarakhand</option>
+                                <option>West Bengal</option>
+                            </select>                    
+                            <span style="font-weight: bolder; font-family: Bodoni MT; font-size: 20px;">Father's Name</span><br />
+                            <input name="fname" type="text" placeholder="Enter Your Father Name" required value="@ViewBag.fn" style=" font-size:15px;width:250px;" class="form-control" />
+                            </div>
+                  <div class="col-sm-6">
+                      <span style="font-weight: bolder; font-family: Bodoni MT; font-size: 20px;">E-mail</span><br />
+                      <input name="mail" type="email" placeholder="Enter Your Name" required value="@ViewBag.email" style=" font-size:15px;width:250px;" class="form-control" />
+                      <span style="font-weight: bolder; font-family: Bodoni MT; font-size: 20px;">Qualification</span><br />
+                      <select name="quali" class="form-control" style="width:250px;">
+                          <option>@ViewBag.qualification</option>
+                          <option>Highschool</option>
+                          <option>Intermediate</option>
+                          <option>Diploma</option>
+                          <option>Graduate</option>
+                          <option>Post Graduate</option>
+                          <option>Medical</option>
+                          <option>Certificate</option>
+                          <option>Other</option>
+                      </select>
+                      
+                      <span style="font-weight: bolder; font-family: Bodoni MT; font-size: 20px;">Gender</span><br />
+                      <select name="gender" class="form-control" style="width:250px;">
+                          <option>@ViewBag.gender</option>
+                          <option>Male</option>
+                          <option>Female</option>
+                          <option>Other</option>
+                      </select>
+                      <input type="hidden" name="user" value="@ViewBag.user" />
+                
+                  </div>
+                  <div class="col-sm-12 text-center"><br />
+                  <input type="submit" style="font-weight: bolder;font-size: 16px;margin-right:90px;" class="btn btn-success" value="save"/>
+                        </div>
+               </div>
+                    
+           
+</form>

@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "ViewDonation";
+    Layout = "~/Views/Shared/MasterAdmin.cshtml";
+}
+
+<br />
+<div class="container-fluid">
+    <div class="col-sm-12 text-center" style="min-height:50px;background-color:#810958;color:whitesmoke;font-family:Algerian;font-size:27px;padding-top:5px;padding:0px;">--- Show Donation ---</div><br />
+    <div class="col-sm-12 text-center" style="padding:0px;">
+        <br />
+        <table border="2" class="table table-hover" style="text-align: center; font-size: 15px; font-family: 'Bodoni MT'; font-weight: bold; background-color: #a6e88a; color: darkblue;">
+            <tr style="color:black;font-size:18px;">
+                <th>S.No</th>
+                <th>Name</th>
+                <th>Father's Name</th>
+                <th>Mobile No.</th>
+                <th>E-mail</th>
+                <th>Address</th>
+                <th>Donation Purpose</th>
+                <th>Amount</th>
+                <th>Donor DT</th>
+                <th>In Account</th>
+                <th>Receipt</th>
+                <th>Ddate</th>
+            </tr>
+            @Html.Raw(ViewBag.st)
+        </table>
+    </div></div>
+

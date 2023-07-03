@@ -1,0 +1,152 @@
+﻿@{
+    ViewBag.Title = "Registration_Form";
+    Layout = "~/Views/Shared/General_Master_Page.cshtml";
+}
+<script>
+    // checkbox  code
+    $(document).ready(function () {
+        $("#chk").change(function () {
+            var bt = $("#btn").prop("disabled")
+            if (bt == true) {
+                $("#btn").prop("disabled", false)
+                $("#btn").css("color", "black")
+                $("#btn").css("background", "green")
+            }
+            else {
+                $("#btn").prop("disabled", true)
+                $("#btn").css("color", "black")
+                $("#btn").css("background", "gray")
+            }
+        })
+
+    })
+    
+    // password match code 
+    function show() {
+        var p = document.getElementById("bpass").value;
+        if (p == 'show') {
+            document.getElementById("bpass").value = "hide";
+            document.getElementById("tpass").type = "text";
+            document.getElementById("tcpass").type = "text";
+        }
+        else {
+            document.getElementById("bpass").value = "show";
+            document.getElementById("tpass").type = "password";
+            document.getElementById("tcpass").type = "password";
+        }
+
+    }
+    function cnfrm() {
+        var ps = document.getElementById("tpass").value;
+        var cps = document.getElementById("tcpass").value;
+        if (ps != cps) {
+            document.getElementById("sp").innerText = "Password not Match"
+        }
+        else {
+            document.getElementById("sp").innerText = "Password  Match"
+        }
+
+    }
+</script>
+            
+                <form action="/Default1/Registration_Form" method="post" >
+
+<!------Membership form Code----------->
+             <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 " style="min-height: 400px; box-shadow: rgba(15, 133, 117, 0.82) 4px 5px 6px 5px , rgba(255, 255,255,0.5) -3px -3px 6px 2px; ">
+                       
+                        <div class="row">
+                            <div class="col-sm-12" style="min-height:40px;text-align:center;font-size:25px;font-weight:bold;font-family:Algerian;border-bottom:2px solid gray;border:2px solid black;background-color:rgba(85, 233, 26, 0.85);">Membership Form</div>
+                            <br />
+ <div class="col-sm-12" style="min-height: 300px; border-top: 2px solid black; background-image: url(/Content/Project_Images/IMG-20210920-WA0008.jpg); background-repeat: no-repeat; background-size: 100% 100%; ">
+                               <br />     <div class="col-sm-4">
+                                                        <p style="font-family:'Arial Rounded MT';font-size:15px;color:darkcyan;font-weight:bold;">@ViewBag.n</p>
+     
+                                        <span style="font-weight: bolder; font-family: Bodoni MT; font-size: 20px; ">Name</span><br />
+                                        <input name="name" type="text" placeholder="Enter Your Name" required style="font-size:15px;width:250px;" class="form-control" />
+                                        <span style="font-weight: bolder; font-family: Bodoni MT; font-size: 20px;">Mobile No..</span><br />
+                                              <input name="nmbr" type="number" placeholder="Enter Your Number" required style="font-size:15px;width:250px;" class="form-control" />
+                                        <span style="font-weight: bolder; font-family: Bodoni MT; font-size: 20px;">State</span><br />
+                                              <select name="city" class="form-control" style="width:250px;" required>
+                                                  <option>--Select State--</option>
+                                                  <option>Andhra Pradesh</option>
+                                                  <option>Arunachal Pradesh</option>
+                                                  <option>Assam</option>
+                                                  <option>Bihar</option>
+                                                  <option>Chhattisgarh</option>
+                                                  <option>Goa</option>
+                                                  <option>Gujrat</option>
+                                                  <option>Haryana</option>
+                                                  <option>Himachal Pradesh</option>
+                                                  <option>Jharkhand</option>
+                                                  <option>Karnataka</option>
+                                                  <option>Kerala</option>
+                                                  <option>Madhya Pradesh</option>
+                                                  <option>Maharashtra</option>
+                                                  <option>Manipur</option>
+                                                  <option>Meghalaya</option>
+                                                  <option>Mizoram</option>
+                                                  <option>Nagaland</option>
+                                                  <option>Odisha</option>
+                                                  <option>Punjab</option>
+                                                  <option>Rajasthan</option>
+                                                  <option>Sikkim</option>
+                                                  <option>Tamilnadu</option>
+                                                  <option>Telangana</option>
+                                                  <option>Tripura</option>
+                                                  <option>Uttar Pradesh</option>
+                                                  <option>Uttarakhand</option>
+                                                  <option>West Bengal</option>
+                                              </select>
+                                        <span style="font-weight: bolder; font-family: Bodoni MT; font-size: 20px;">Confirm Password</span>
+                                        <br />
+                                              <input name="cpswrd" id="tpass" type="password" placeholder="Enter Password again" required style="font-size:15px;width:250px;" class="form-control" />
+                                       
+                                    </div>
+                                    <div class="col-sm-4"><br />
+                                        <span style="font-weight: bolder; font-family: Bodoni MT; font-size: 20px;">Father's Name</span><br />
+                                        <input name="fname" type="text" placeholder="Enter Your Father Name" required style="font-size:15px;width:250px;" class="form-control" />
+                                        <span style="font-weight: bolder; font-family: Bodoni MT; font-size: 20px;">E-mail</span><br />
+                                        <input name="mail" type="email" placeholder="Enter Your Name" required style="font-size:15px;width:250px;" class="form-control" />
+                                        <span style="font-weight: bolder; font-family: Bodoni MT; font-size: 20px;">Qualification</span><br />
+                                        <select name="quali" class="form-control" style="width:250px;" required>
+                                            <option>---Select---</option>
+                                            <option>Highschool</option>
+                                            <option>Intermediate</option>
+                                            <option>Diploma</option>
+                                            <option>Graduate</option>
+                                            <option>Post Graduate</option>
+                                            <option>Medical</option>
+                                            <option>Certificate</option>
+                                            <option>Other</option>
+                                        </select><br /><br /><br />
+                                        <input  id="chk" type="checkbox" style="font-size: 35px;" /><span style="color:teal;font-weight:bolder;font-size:19px;"> I Agree Terms And Conditions.</span><br><br>
+                                        <button id="btn" onclick="cnfrm()" type="submit" style="font-weight: bolder;font-size: 18px;height: 30px;width: 100px;background-color: lightgrey;margin-left:180px;" disabled>Submit</button>
+                                        <br /> <span style="font-size: 20px; font-family: Bodoni MT; font-weight: bolder;color:whitesmoke;">
+                                            Already have an Account ?
+                                            <a href="~/Default1/Login">Login here</a>
+                                        </span><br /><br />
+                                     </div>
+                                    <div class="col-sm-4"><br />
+                                        <span style="font-weight: bolder; font-family: Bodoni MT; font-size: 20px;">Gender</span><br />
+                                        <select name="gender" class="form-control" style="width:250px;" required>
+                                            <option>---Select----</option>
+                                            <option>Male</option>
+                                            <option>Female</option>
+                                            <option>Other</option>
+                                        </select>
+                                        <span style="font-weight: bolder; font-family: Bodoni MT; font-size: 20px;">Date of Birth</span><br />
+                                        <input name="dob" type="date" required style="font-size:15px;width:250px;" class="form-control" />
+                                        <span style="font-weight: bolder; font-family: Bodoni MT; font-size: 20px;"> Password</span>
+                                        <input class="fa fa-eye" onclick="show()" type="button" value="show" id="bpass" style="font-size:15px;margin-left:30px;" /><br />
+                                        <input name="pswrd"  id="tcpass" type="password" placeholder="Enter Your password " required style="font-size:15px;width:250px;" class="form-control" />
+                                       
+                                     </div>
+                                </div>
+                            </div>                                                           
+                    </div>
+                        </div></div>
+                   
+            </form>
+<br /><br />

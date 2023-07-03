@@ -1,0 +1,193 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/General_Master_Page.cshtml";
+}
+@using System.Data;
+@using Swachh_Bharat_Abhiyan_Project.Models;
+
+<!-------Code For Slider-->
+
+<div class="container-fluid">
+    <div class="col-sm-12" style="min-height:500px;padding:0px;">
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="~/Content/Project_Images/slider%20pic/sli.jpg" style="height:500px;width:100%;" />
+        </div>
+
+        <div class="item">
+            <img src="~/Content/Project_Images/slider%20pic/sli2.jpg" style="height: 500px; width: 100%;" />
+        </div>
+
+        <div class="item">
+            <img src="~/Content/Project_Images/slider%20pic/gl4.jpg" style="height: 500px; width: 100%;" />
+        </div>
+        <div class="item">
+            <img src="~/Content/Project_Images/slider%20pic/gl2.jpg" style="height: 500px; width: 100%;" />
+
+        </div>
+        <div class="item">
+            <img src="~/Content/Project_Images/slider%20pic/gl3.jpg" style="height: 500px; width: 100%;" />
+
+        </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+        </div></div>
+<!----end code for slider--------->
+<!---Code for Notification-->
+        <div class="row">
+            <div class="col-sm-12" style="background-image:linear-gradient(skyblue,white,skyblue);min-height:50px;">
+                <marquee scrollamount="20" direction="right" onmouseover="this.stop()" onmouseout="this.start()" style="color:darkblue;font-size:17px;font-weight:bolder;font-family:'Global Serif';">
+                   "Clean India Disease-Free India"
+                </marquee>
+                <marquee scrollamount="20" direction="left" onmouseover="this.stop()" onmouseout="this.start()" style="color:darkblue;font-size:17px;font-weight:bolder;font-family:'Global Serif';">
+                    @{
+                        SBAManager s = new SBAManager();
+                        string cmd = "select * from Notificatio_tbl where Isactive=1";
+                        DataTable dt;
+                        dt = s.GetAllRecord(cmd);
+                        if (dt.Rows.Count > 0)
+                        {
+                                @dt.Rows[0]["description"]
+                          
+                        }
+                    }
+                </marquee>
+           
+            </div>
+        </div>
+<!--End code-->
+<!--Intro-->
+<div class="row">
+    <div class="col-sm-12" style="min-height:400px;">
+        <div class="row">
+            <div class="col-sm-12" style="min-height:40px;">
+                <p style="color:teal;font-family:Algerian;font-weight:bold;font-size:25px;padding-top:10px;margin-left:30px;">About SBA</p>
+            </div></div>
+        <div class="row">
+            <div class="col-sm-12" style="min-height:300px;">
+                <div class="col-sm-3" style="min-height:200px;">
+                    <img src="~/Content/Project_Images/gallery%20pic/sb.png"  style="height:200px;width:100%;"/>                
+                </div>
+                <div class="col-sm-6" style="min-height:300px;"><p style="font-size:18px;">To accelerate the efforts to achieve universal sanitation coverage and to put the focus on sanitation, the Prime Minister of India had launched the Swachh Bharat Mission on 2nd October 2014. Under the mission, all villages, Gram Panchayats, Districts, States and Union Territories in India declared themselves "open-defecation free" (ODF) by 2 October 2019, the 150th birth anniversary of Mahatma Gandhi, by constructing over 100 million toilets in rural India. To ensure that the open defecation free behaviours are sustained, no one is left behind, and that solid and liquid waste management facilities are accessible, the Mission is moving towards the next Phase II of SBMG i.e ODF-Plus. ODF Plus activities under Phase II of Swachh Bharat Mission (Grameen) will reinforce ODF behaviours and focus on providing interventions for the safe management of solid and liquid waste in villages.........<a href="~/Default1/About">Read More..</a></p></div>
+                    <div class="col-sm-3" style="min-height:300px;">
+                        <a href="~/Default1/Seva"><img src="~/Content/Project_Images/gallery%20pic/sb3.png" style="height:300px; width:100%;" /></a>
+                     </div>                       
+                    </div>
+                </div>
+            </div>
+        </div>
+
+  <!--Some Addition-->      
+        <div class="row">
+            <div class="col-sm-12" style="min-height:250px;">
+                <div class="row">
+                    <div class="col-sm-12" style="min-height:125px;"><div class="col-sm-2"></div>
+        <div class="col-sm-4"> <div class="col-sm-12"><div class="col-sm-1"></div>
+   <a href="~/Default1/Gobardhan" ><div class="col-sm-10 hv text-center" style="background-color:green;min-height:80px;">Gobardhan </div> </a>          
+            <div class="col-sm-1"></div> </div> </div>
+            <div class="col-sm-4"><div class="col-sm-12"><div class="col-sm-1"></div>
+                 <a href="~/Default1/SLWM"> <div class="col-sm-10 hv" style="background-color:purple;min-height:80px;font-size:20px;">Solid and Liquid Waste Management</div></a>
+                                          <div class="col-sm-1"></div>
+                <div class="col-sm-2"></div>
+</div> </div>
+               
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12" style="min-height:125px;">
+              <div class="col-sm-4"> <div class="col-sm-12"><div class="col-sm-1"></div>
+   <a href="~/Default1/Areas"><div class="col-sm-10 hv text-center" style="background-color:#808080;min-height:80px;font-size:25px;">
+                                                 Progress In Ruler Areas
+                                             </div></a><div class="col-sm-1"></div>
+</div> </div>
+             <div class="col-sm-4"><div class="col-sm-12"><div class="col-sm-1"></div>
+      <a href="~/Default1/Impacts"><div class="col-sm-10 hv text-center" style="background-color:limegreen;min-height:80px;">Impacts</div></a><div class="col-sm-1"></div> </div> </div>
+                        <div class="col-sm-4">
+                            <div class="col-sm-12">
+                                <div class="col-sm-1"></div><a href="~/Default1/Nmani">
+                                    <div class="col-sm-10 hv text-center" style="background-color: #e7ad46; min-height: 80px; ">
+                                        Namami Gange
+                                    </div>
+                                </a><div class="col-sm-1"></div>
+                            </div>
+                        </div>      
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+<div class="col-sm-12" style="min-height:130px;background-color:#09b5b5;">
+    <div class="col-sm-2">
+        <span style="font-size:30px;margin-left:30px;font-weight:bold;">89,693</span><br />
+        <span style="color:blue;font-size:20px;">SWACHH BHARAT</span>
+         <span style="font-size:23px;color:whitesmoke;">Pledges Taken</span>   
+    </div>
+    <div class="col-sm-2">
+        <span style="font-size:30px;margin-left:30px;font-weight:bold;">24,780</span><br />
+        <span style="color:blue;font-size:20px;">SWACHH BHARAT</span>
+        <span style="font-size:23px;color:whitesmoke;">Challenges Taken</span>
+    </div>
+    <div class="col-sm-2">
+        <span style="font-size:30px;margin-left:30px;font-weight:bold;">26,563</span><br />
+        <span style="color:blue;font-size:20px;">SWACHH BHARAT</span>
+        <span style="font-size:23px;color:whitesmoke;">Activities Done</span>
+    </div>
+    <div class="col-sm-2">
+        <span style="font-size:30px;margin-left:30px;font-weight:bold;">51,343</span><br />
+        <span style="color:blue;font-size:20px;">SWACHH BHARAT</span>
+        <span style="font-size:23px;color:whitesmoke;">Active Participants</span>
+    </div>
+    <div class="col-sm-2">
+        <span style="font-size:30px;margin-left:30px;font-weight:bold;">13,71,411</span><br />
+        <span style="color:blue;font-size:20px;">SWACHH BHARAT</span>
+        <span style="font-size:23px;color:whitesmoke;">Contributed Hours</span>
+    </div>
+    <div class="col-sm-2">
+        <span style="font-size:30px;margin-left:30px;font-weight:bold;">6,106</span><br />
+        <span style="color:blue;font-size:20px;">SWACHH BHARAT</span>
+        <span style="font-size:23px;color:whitesmoke;">Pakhwada Activities</span>
+    </div>
+</div>        
+<div class="col-sm-12" style="min-height:5px;"></div>
+<div class="col-sm-12" style="min-height:400px;">
+    <div class="col-sm-3">
+        <img src="~/Content/Project_Images/i5.png" style="height:350px;width:100%" class="hvr-float-shadow" />
+        <span style="font-weight:bold;padding-top:3px;color:blue;">Swachh Bharat Activity enables you to share "before" and "after" pictures and videos of your contribution to SBA. </span>
+    </div>
+    <div class="col-sm-3 text-center">
+        <img src="~/Content/Project_Images/i1.png" style="height:350px;width:100%" class="hvr-float-shadow" />
+        <span style="font-weight:bold;padding-top:3px;color:blue;font-size:16px;">"Let's make the right choice and use dustbin."</span>
+</div>
+    <div class="col-sm-3 text-center">
+        <img src="~/Content/Project_Images/i2.png" style="height:350px;width:100%" class="hvr-float-shadow" /><br />
+        <span style="font-weight:bold;padding-top:3px;color:blue;font-size:18px;padding-top:5px;">"Its our Planet, Don't throw it away."</span>
+</div>
+    <div class="col-sm-3 text-center">
+        <img src="~/Content/Project_Images/i3.png" style="height:350px;width:100%" class="hvr-float-shadow"><span style="font-weight:bold;padding-top:3px;color:blue;font-size:16px;">"Cleanliness is the only solution to stay away from diseases."</span>
+</div>
+
+</div>
+

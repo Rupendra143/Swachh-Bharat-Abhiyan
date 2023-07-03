@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "ViewSug";
+    Layout = "~/Views/Shared/MasterAdmin.cshtml";
+}
+
+<br />
+<div class="container">
+    <div class="col-sm-12 text-center" style="min-height:50px;background-color:#810958;color:whitesmoke;font-family:Algerian;font-size:27px;padding-top:5px;">--- Show Feedback/Request ---</div><br />
+    <div class="col-sm-12 text-center" style="padding:0px;">
+        <br />
+        <table border="5" class="table table-hover" style="text-align: center; font-size: 20px; font-family: 'Bodoni MT'; font-weight: bold; background-color: #a6e88a; color: darkblue;">
+            <tr style="color:black;font-size:25px;">
+                <th>S.No</th>
+                <th>E-mail</th>
+                <th>Mobile No.</th>
+                <th>Comment/Request</th>
+            </tr>
+            @Html.Raw(ViewBag.fd)
+        </table>
+    </div>
+</div>

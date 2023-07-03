@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootStrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootStrap/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/bootStrap/css/hover.css" rel="stylesheet" />
+
+    <script src="~/Content/bootStrap/js/jquery-2.1.0.min.js"></script>
+    <script src="~/Content/bootStrap/js/bootstrap.min.js"></script>
+    
+
+    <link href="~/Content/Project_Images/header_logo/P_logo.png" rel="icon" />
+    <style>
+        body {
+           
+            background-color: lightgray;
+        }
+        .hv {
+            font-size: 30px;
+            color: white;
+            font-weight: bold;
+            font-family: Georgia;
+            padding-top:15px;
+        }
+        .hv:hover {
+           color:darkblue;
+           opacity:0.8;
+            
+        } 
+        .s{
+            font-size:35px;
+            color:#f6d40b;
+            font-weight:bolder;
+            font-family:'Arial Rounded MT';
+            padding-top:10px;
+        }
+        .b{
+            font-size:20px;
+            color:whitesmoke;
+            font-family:'Book Antiqua';
+            padding-top:6px;
+        }
+    </style>
+</head>
+<body style="background-color:lightgray">
+    
+    <div class=" container-fluid" style="padding:0px;">
+    <!----Header _ 1-->
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="col-sm-2">
+                <img src="~/Content/Project_Images/footer%20logos/flag.gif" style="padding-top:15px;" />
+
+            </div>
+            <div class="col-sm-8" style="min-height:50px;background-color: ;color:teal;font-size:28px;padding-top:5px;font-family:Algerian;text-align:center; ">
+                Welcome In Swachh Bharat Abhiyan
+            </div>
+            <div class="col-sm-2">
+
+            </div>
+        </div>
+    </div>
+    <!----Header _ 2-->
+    <div class="row">
+        <div class="col-sm-12" style="min-height:100px;background-color:teal;">
+
+            <div class="col-sm-3">
+                <img src="~/Content/Project_Images/header_logo/header_logo.png" style="height:100px;" />
+            </div>
+            <div class="col-sm-6" style="min-height:50px;font-weight:bolder;color:whitesmoke;font-size:40px;padding-top:5px;font-family:Bodoni MT;text-align:left;">
+                Swachh Bharat Abhiyan
+                <p style="font-size:18px;padding-bottom:10px;text-align:center;"> ( एक कदम स्वच्छता की ओर ) </p>
+            </div>
+            <div class="col-sm-3">
+                <br />
+                <a href="#" class="fa fa-facebook" style="padding:10px;font-size:30px;width:50px;text-align:center;margin:3px 2px;background-color:#2123eb;color:white;margin-left:0px;border-radius:50%; "></a>
+                <a href="#" class="fa fa-google" style="padding:10px;font-size:30px;width:50px;text-align:center;margin:3px 2px;background-color:white;color:red;margin-left:0px;border:1px solid black; border-radius:50%;"></a>
+                <a href="#" class="fa fa-twitter" style="padding:10px;font-size:30px;width:50px;text-align:center;margin:3px 2px;background-color:#14daf3;;color:white;margin-left:0px;border-radius:50%; "></a>
+                <a href="#" class="fa fa-linkedin" style=";border:1px solid black;padding:10px;font-size:30px;width:50px;text-align:center;margin:3px 2px;background-color:#0a8ca0;color:white;margin-left:0px;border-radius:50%; "></a>
+            </div>
+        </div>
+    </div>
+    <!---Code For Menu-->
+    <div class="row">
+        <div class="col-sm-12" style="min-height:50px;padding:0px;background-color:lightgrey;">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid" style="background-color: darkblue;">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a href="~/Default1/Index" style="color: whitesmoke; font-weight: bolder; font-family: Bodoni MT; font-size: 23px;">Home</a></li>
+                            <li><a href="~/Default1/Registration_Form" style="color: whitesmoke; font-weight: bolder; font-family: Bodoni MT; font-size: 22px;">Membership</a></li>
+                            <li><a href="~/Default1/Donation" style="color: whitesmoke; font-weight: bolder; font-family: Bodoni MT; font-size: 22px;">Donation</a></li>
+                            <li><a href="~/Default1/Login" style="color: whitesmoke; font-weight: bolder; font-family: Bodoni MT; font-size: 22px;">LogIn </a></li>
+                            <li><a href="~/Default1/ContactUs" style="color: whitesmoke; font-weight: bolder; font-family: Bodoni MT; font-size: 22px;">Contact Us</a></li>
+                            <li><a href="~/Default1/About" style="color: whitesmoke; font-weight: bolder; font-family: Bodoni MT; font-size: 22px;">About SBA</a></li>
+                        </ul>
+                        <form class="navbar-form navbar-right" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                            <button type="submit" class="btn btn-success">Search</button>
+                        </form>
+
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+
+        </div>
+    </div>
+    <!----End Code For Menu-->
+    <div>
+        @RenderBody()
+    </div>
+    <!---Footer  Code Start-->
+    <div class="row">
+        <div class="col-sm-12" style="min-height:180px;background-color:teal;">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                <div class="col-sm-12">
+                    <div class="col-sm-2">
+
+                        <br /><br />      <a href="~/Default1/Image" style="color: whitesmoke; font-weight: bolder; font-family: cursive;font-size: 15px;">Image Gallery</a>
+                        <br /><br /> <a href="~/Default1/ContactUs " style="color: whitesmoke; font-weight: bolder; font-family: cursive;font-size: 15px;">Suggestions</a>
+                        <br /><br />
+                    </div>
+                    <div class="col-sm-1">
+                        <br /><br />             <a href=" " style="color: whitesmoke; font-weight: bolder; font-family: cursive;font-size: 15px;">My Team</a>
+                        <br /><br /> <a href="~/Default1/Index" style="color: whitesmoke; font-weight: bolder; font-family: cursive;font-size: 15px;">Home</a>
+                    </div>
+                    <div class="col-sm-1">
+                        <br /><br />
+
+
+                    </div>
+                    <div class="col-sm-7">
+                        <br /><br /><br />
+                        <span style="font-size:15px;font-weight:bolder;font-family:cursive;color:whitesmoke;margin-left:10px;">
+
+                            <span style="font-size:15px;font-weight:bolder;font-family:cursive;color:whitesmoke;margin-left:10px;">
+                            </span>
+                        </span>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+            </div>
+            <div class="col-sm-1"></div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12" style="min-height:40px;background-color:teal;border:1px solid gray;">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-1">
+                <img src="~/Content/Project_Images/footer%20logos/innovation-logo.png" style="height:30px;" />
+            </div>
+            <div class="col-sm-1">
+                <img src="~/Content/Project_Images/footer%20logos/Transforming-india-logo.png" height="30px;" />
+            </div>
+            <div class="col-sm-1">
+                <img src="~/Content/Project_Images/footer%20logos/mygov_quiz.png" style="height:30px" />
+            </div>
+            <div class="col-sm-1">
+                <img src="~/Content/Project_Images/footer%20logos/blog-logo.png" style="height:30px;margin-left:5px;" />
+            </div>
+            <div class="col-sm-1">
+                <img src="~/Content/Project_Images/footer%20logos/itowe-logo.png" style="height:30px;" />
+            </div>
+            <div class="col-sm-1">
+                <img src="~/Content/Project_Images/footer%20logos/e-greating.png" style="height:30px;margin-left:7px;" />
+            </div>
+            <div class="col-sm-1">
+                <img src="~/Content/Project_Images/footer%20logos/swachh-bharat.png" style="height:30px;margin-left:7px;" />
+            </div>
+
+        </div>
+
+        <!---End code for Footer -->
+        <!---Footer 2-->
+        <div class="container-fluid">
+            <div class="col-sm-12" style="min-height:60px;background-color:black;">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-1">
+                    <img src="~/Content/Project_Images/footer%20logos/india-gov-logo.png" style="height:40px;padding-top:5px;" />
+                </div>
+                <div class="col-sm-1">
+                    <img src="~/Content/Project_Images/footer%20logos/data-gov-logo.png" style="height:40px;padding-top:5px;margin-left:40px;" />
+                </div>
+                <div class="col-sm-1">
+                    <img src="~/Content/Project_Images/footer%20logos/digital-india-logo.png" style="height:40px;padding-top:5px;margin-left:60px;" />
+                </div>
+                <div class="col-sm-1">
+                    <img src="~/Content/Project_Images/footer%20logos/Meity_logo.png" style="height:40px;padding-top:5px;margin-left:60px;" />
+                </div>
+                <div class="col-sm-1">
+                    <img src="~/Content/Project_Images/footer%20logos/mygov-footer-logo%20(1).png" style="height:40px;padding-top:5px;margin-left:70px;width:100%;" />
+                </div>
+                <div class="col-sm-1">
+                    <img src="~/Content/Project_Images/footer%20logos/pm-india-logo.png" style="height:40px;padding-top:5px;margin-left:80px;" />
+
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-3">
+                    <div class="row"> <div class="col-sm-12" style="min-height:30px;"></div></div>
+                    <div class="row">
+                        <div class="col-sm-12" style="min-height:50px;">
+                            <span style="color: white; font-size: 20px; padding-top: 10px; font-family: Colonna MT;">Created and Designed by--</span>
+                            <span style="color: white; font-size: 20px;  font-family: Colonna MT;text-align:center;">Rupendra Chaurasiya</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> </div>
+</body>
+</html>

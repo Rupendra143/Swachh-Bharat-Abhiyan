@@ -1,0 +1,73 @@
+﻿@{
+    ViewBag.Title = "Donation";
+    Layout = "~/Views/Shared/General_Master_Page.cshtml";
+}
+        <!----Code for donation menu---->
+        <form action="/Default1/Donation" method="post" enctype="multipart/form-data">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12" style="min-height:600px;">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8" style="min-height:600px;">
+                    <div class="row">
+                        <div class="col-sm-12 text-center" style="background-color: limegreen; min-height: 40px; font-size: 25px; font-family: Algerian;font-weight:bold;">
+                            Donation form
+                        </div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-sm-12 text-left" style="background-color:; min-height: 500px; border-top: 2px solid black; border-left: 2px solid black; border-right: 2px solid black; background-color: rgba(11, 179, 156, 0.72)">
+                            <br />
+                            <div class="col-sm-6">
+                                <span style="font-family: Bodoni MT;font-size:23px;font-weight:bold;">Name</span>
+                                <input type="text" name="nm" placeholder="Enter Your Name" required class="form-control" style="width:250px;" /><br />
+                                <span style="font-family: Bodoni MT;font-size:23px;font-weight:bold;font-weight:bold;">Mobile No..</span>
+                                <input type="number" name="nmb" placeholder="Enter Your Number" class="form-control" style="width:250px" required /><br />
+                                <span style="font-family: Bodoni MT;font-size:23px;font-weight:bold;">Address</span>
+                                <input type="text" name="adrs" placeholder="Enter Your Address" required class="form-control" style="width:250px;" />
+                                <br />
+                                <span style="font-family:'Bodoni MT';font-size:23px;font-weight:bold;">Amount</span>
+                                <input name="rs" type="number" placeholder="Enter Amount" required class="form-control" style="width:250px;" />
+                                <br />
+                                <span style="font-family:'Bodoni MT';font-size:23px;font-weight:bold;">Account No..</span>
+                                <select name="acn" class="form-control" style="width:250px;">
+                                    <option>--select--</option>
+                                    <option>AC. NO- 4159001500058640 IFSC- PUNB0415900</option>
+                                    <option>  9506201671(Paytm,PhonePay All Accepted)</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-6">
+                                <span style="font-family: Bodoni MT;font-size:23px;font-weight:bold;">Father's Name</span>
+                                <input name="pnam" type="text" placeholder="Enter Father Name" required class="form-control" style="width:250px;margin-left:20px;" />
+                                <br />     <span style="font-family: Bodoni MT;font-size:23px;font-weight:bold;">E-mail</span>
+                                <input type="email" name="email" placeholder="Enter Your Email" required class="form-control" style="width:250px;margin-left:20px;" />
+                                <br />
+                                <span style="font-family: Bodoni MT;font-size:23px;font-weight:bold;">Donation Purpose</span>
+                                <input name="prps" type="text" placeholder="Enter here" required class="form-control" style="width:250px;margin-left:20px;" />
+                                <br />
+                                <span style="font-family:'Bodoni MT';font-size:23px;font-weight:bold;">Donor Details</span>
+                                <input name="dt" type="text" placeholder="Enter Here" required class="form-control" style="width:250px;" />
+                                <br />
+                                <span style="font-family:'Bodoni MT';font-size:23px;font-weight:bold;">Upload Payment Receipt</span>
+                                <input name="file" type="file" class="form-control" style="width:250px;" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 text-center" style="min-height: 100px; border-bottom: 2px solid black; border-left: 2px solid black; border-right: 2px solid black; background-color: rgba(11, 179, 156, 0.72)">
+                            <input type="checkbox" />
+                            <span style="font-family:'Bodoni MT';font-size:20px;font-weight:bold;">I Agree With Terms & Conditions</span>
+                            <br /><br />
+                            <button type="submit" class="btn btn-success" style="color:white;font-weight:bold;font-size:20px;width:130px;">Submit</button>
+                            <p style="font-size:18px;font-family:'Arial Rounded MT';color:darkblue;"> @ViewBag.d</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2"></div>
+
+
+            </div>
+        </div>
+    </div>
+</form>
+    
+    <br />

@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "ViewRegistration";
+    Layout = "~/Views/Shared/MasterAdmin.cshtml";
+}
+<br />
+<div class="col-sm-12 text-center" style="min-height:50px;background-color:#810958;color:whitesmoke;font-family:Algerian;font-size:27px;padding-top:5px;">--- Show Registration ---</div><br />
+    <div class="col-sm-12 text-center" style="padding:0px;">
+        <br />
+        <table border="2" class="table table-hover" style="text-align: center;  font-size: 20px; font-family:'Bodoni MT'; font-weight: bold;background-color:#a6e88a;color:darkblue;">
+            <tr style="color:black;font-size:25px;">
+                <th>S.No</th>
+                <th>Name</th>
+                <th>Father's Name</th>
+                <th>Gender</th>
+                <th>Mobile No.</th>
+                <th>E-mail Address</th>
+                <th>Date of Birth</th>
+                <th>State</th>
+                <th>Qualification</th>
+                <th>Rdate</th>
+                <th>Action</th>
+            </tr>
+            @Html.Raw(ViewBag.tr)
+        </table>
+    </div>

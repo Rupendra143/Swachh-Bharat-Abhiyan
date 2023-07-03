@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Image";
+    Layout = "~/Views/Shared/General_Master_Page.cshtml";
+}
+@using System.Data;
+@using Swachh_Bharat_Abhiyan_Project.Models;
+
+
+<div class="container-fluid">
+    <div class="col-sm-12" style="background-color:#a76262"><p style="text-align: center;color:whitesmoke;font-weight: bold;font-family: serif;font-size:25px;">Image Gallary</p></div>
+
+                <div class="col-sm-12" style="min-height: 250px;padding:0px;">
+                    @{
+                        SBAManager s = new SBAManager();
+                        string cmd = "select * from Gallery_tbl where Isactive=1";
+                        DataTable dt;
+                        dt = s.GetAllRecord(cmd);
+                        if (dt.Rows.Count > 0)
+                        {
+                            for (int i = 0; i < dt.Rows.Count; i++)
+                            {
+                                  <div class="col-sm-3  hvr-bounce-in" style="min-height: 250px; padding: 0px;">
+
+                                      <img src="/Content/UploadImage/@dt.Rows[i]["Image"]" height="250px" width="100%" alt="@dt.Rows[i]["Title"]" />
+                    </div>
+                            }
+                        }
+                    }
+                  
+                </div>            
+            
+                <div class="col-sm-12" style="min-height: 300px;padding:0px;">
+                    <div class="col-sm-6   hvr-bounce-in" style="min-height: 300px; padding: 0px;">
+                        <img src="~/Content/Project_Images/gallery_img/img4.jpg" height="300px" width="100%" />
+                    </div>
+                    <div class="col-sm-6   hvr-bounce-in" style="min-height: 300px; padding: 0px;">
+                        <img src="~/Content/Project_Images/gallery_img/img8.jpg" height="300px" width="100%" />
+                    </div>
+                </div>
+            
+    <div class="col-sm-12   hvr-bounce-in" style="min-height: 500px;padding:0px;">
+    <img src="~/Content/Project_Images/gallery_img/img16.jpg" height="500px" width="100%" />
+
+</div>
+    
+</div>
